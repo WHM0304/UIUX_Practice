@@ -13,6 +13,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const date1 = new Date(2024, month_num);
       document.getElementById("demo").innerHTML = date1;
       month_num = month_num - 1;
+    } else if (prev) {
+      const date1 = new Date(2024, month_num);
+      document.getElementById("demo").innerHTML = date1;
+      month_num = month_num + 1;
     }
   });
 });

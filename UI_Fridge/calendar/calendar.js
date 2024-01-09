@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   const main_nav = document.querySelector("body");
   let month_num = 0;
+
+  const create_day = () => {
+    const liTag = document.createElement("LI");
+    liTag.classList.add("day");
+    liTag.innerText = days;
+  };
   main_nav.addEventListener("click", (event) => {
     const main_name = event.target.tagName;
     const nav_class = event.target.className;
@@ -25,9 +31,12 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("month").innerHTML = date
     .toDateString()
     .substring(4, 7);
+
   const month = document.querySelector("div.month");
   const month_prev = document.querySelector("li.prev");
   const month_next = document.querySelector("li.next");
+  const date_end = new Date(2024, month_num + 1, 0);
+  let day_end = Number(date.toDateString().substring(7, 10));
 
   month.addEventListener("click", (event) => {
     const target = event.target;
