@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100vh;
+}
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+button {
+  border: 1px solid black;
+}
+li {
+  list-style: none;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.weekdays {
+  display: flex;
+  background-color: aquamarine;
+
+  justify-content: space-around;
+}
+.weekdays li {
+  border: 1px solid blue;
+  padding: 0.8rem;
+  flex: 1;
+  text-align: center;
+}
+.days_div {
+  flex: 1;
+  border: 1px solid red;
+}
+.days {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+}
+ul.days li {
+  list-style: none;
+  border: 1px solid black;
+  width: 12.5%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  display: block;
+}
