@@ -2,11 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const main_nav = document.querySelector("body");
   let month_num = 0;
 
-  const create_day = () => {
-    const liTag = document.createElement("LI");
-    liTag.classList.add("day");
-    liTag.innerText = days;
-  };
   main_nav.addEventListener("click", (event) => {
     const main_name = event.target.tagName;
     const nav_class = event.target.className;
